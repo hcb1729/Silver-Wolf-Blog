@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-hue="265">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所追寻的风 · 个人博客</title>
+    <meta name="description" content="欢迎来到我的博客！我是一位普通的技术爱好者——所追寻的风。分享学习笔记、技术文章和生活点滴。">
+    <meta name="keywords" content="所追寻的风, 个人博客, AI, ACG, C++, Python, 开源, 银狼, 星穹铁道">
+    <meta name="author" content="所追寻的风">
+    <meta property="og:site_name" content="所追寻的风">
+    <meta property="og:title" content="所追寻的风 · 个人博客">
+    <meta property="og:description" content="欢迎来到我的博客！我是一位普通的技术爱好者——所追寻的风。分享学习笔记、技术文章和生活点滴。">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <img src="images/头像.png" alt="头像" class="nav-avatar">
+                <span class="nav-title">所追寻的风</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-item active">
+                    <span class="material-symbols-outlined nav-icon">cottage</span>主页
+                </a>
+                <div class="nav-dropdown">
+                    <button class="nav-item nav-dropdown-trigger">
+                        <span class="material-symbols-outlined nav-icon">article</span>文章
+                        <span class="material-symbols-outlined dropdown-arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="#archive"><span class="material-symbols-outlined">archive</span>归档</a>
+                        <a href="#categories"><span class="material-symbols-outlined">folder_open</span>分类</a>
+                        <a href="#tags"><span class="material-symbols-outlined">tag</span>标签</a>
+                    </div>
+                </div>
+                <a href="#friends" class="nav-item">
+                    <span class="material-symbols-outlined nav-icon">group</span>友链
+                </a>
+                <a href="#gallery" class="nav-item">
+                    <span class="material-symbols-outlined nav-icon">photo_library</span>相册
+                </a>
+                <a href="#videos" class="nav-item">
+                    <span class="material-symbols-outlined nav-icon">videocam</span>视频
+                </a>
+                <a href="#chat" class="nav-item">
+                    <span class="material-symbols-outlined nav-icon">smart_toy</span>银狼 AI
+                </a>
+                <a href="#about" class="nav-item">
+                    <span class="material-symbols-outlined nav-icon">person</span>关于
+                </a>
+                <div class="nav-dropdown">
+                    <button class="nav-item nav-dropdown-trigger">
+                        <span class="material-symbols-outlined nav-icon">link</span>链接
+                        <span class="material-symbols-outlined dropdown-arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="https://github.com/hcb1729" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>GitHub
+                        </a>
+                        <a href="https://gitee.com/hcb1729" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-code-branch"></i>Gitee
+                        </a>
+                        <a href="https://qm.qq.com/q/ZGsFa8qX2G" target="_blank" rel="noopener">
+                            <i class="fab fa-qq"></i>QQ 群
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-panel" id="mobilePanel">
+            <div class="mobile-panel-header">
+                <img src="images/头像.png" alt="头像" class="mobile-panel-avatar">
+                <div>
+                    <div class="mobile-panel-name">所追寻的风</div>
+                    <div class="mobile-panel-bio">一位普通的技术爱好者</div>
+                </div>
+            </div>
+            <div class="mobile-panel-links">
+                <a href="#home"><span class="material-symbols-outlined">cottage</span>主页</a>
+                <a href="#about"><span class="material-symbols-outlined">person</span>关于</a>
+                <a href="#archive"><span class="material-symbols-outlined">archive</span>归档</a>
+                <a href="#categories"><span class="material-symbols-outlined">folder_open</span>分类</a>
+                <a href="#tags"><span class="material-symbols-outlined">tag</span>标签</a>
+                <a href="#friends"><span class="material-symbols-outlined">group</span>友链</a>
+                <a href="#gallery"><span class="material-symbols-outlined">photo_library</span>相册</a>
+                <a href="#videos"><span class="material-symbols-outlined">videocam</span>视频</a>
+                <a href="#chat"><span class="material-symbols-outlined">smart_toy</span>银狼 AI</a>
+                <a href="https://github.com/hcb1729" target="_blank" rel="noopener"><i class="fab fa-github"></i>GitHub</a>
+                <a href="https://gitee.com/hcb1729" target="_blank" rel="noopener"><i class="fa-solid fa-code-branch"></i>Gitee</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <video class="hero-video" id="heroVideo" muted loop playsinline poster="images/银狼0.jpg">
+                <source src="vedio/银狼.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <canvas id="particleCanvas" class="hero-particles"></canvas>
+        </div>
+        <div class="hero-title-group">
+            <h1 class="hero-title glitch-text" data-text="所追寻的风">所追寻的风</h1>
+            <div class="hero-subtitle">
+                <span id="typewriter"></span><span class="cursor-blink"></span>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>向下滚动</span>
+            <span class="material-symbols-outlined bounce-arrow">keyboard_arrow_down</span>
+        </div>
+    </section>
+
+    <div class="waves-wrapper" id="header-waves">
+        <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none">
+            <defs>
+                <path id="wave-pattern" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"/>
+            </defs>
+            <g class="parallax">
+                <use href="#wave-pattern" x="48" y="0" fill="currentColor" opacity="0.7"/>
+                <use href="#wave-pattern" x="48" y="3" fill="currentColor" opacity="0.5"/>
+                <use href="#wave-pattern" x="48" y="5" fill="currentColor" opacity="0.3"/>
+                <use href="#wave-pattern" x="48" y="7" fill="currentColor" opacity="0.15"/>
+            </g>
+        </svg>
+    </div>
+
+    <main class="main-content">
+        <div class="content-grid">
+            <aside class="sidebar sidebar-left">
+                <div class="card-widget profile-card reveal">
+                    <a href="#about" class="profile-avatar-wrapper">
+                        <img src="images/头像.png" alt="头像" class="profile-avatar">
+                        <div class="avatar-glow-ring"></div>
+                    </a>
+                    <a href="#about" class="profile-name">所追寻的风</a>
+                    <p class="profile-bio">一位普通的技术爱好者，爱好 ACG、户外、羽毛球、足球、马拉松。</p>
+                    <div class="profile-social">
+                        <a href="https://github.com/hcb1729" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:861999067@qq.com" class="social-icon" title="邮箱">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://qm.qq.com/q/ZGsFa8qX2G" target="_blank" rel="noopener" class="social-icon" title="QQ">
+                            <i class="fab fa-qq"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-widget announcement-card reveal">
+                    <div class="widget-header">
+                        <span class="material-symbols-outlined">campaign</span>公告
+                    </div>
+                    <p>欢迎来到我的博客！这里记录了我的学习笔记、技术探索和生活感悟。</p>
+                    <a href="#about" class="widget-link">了解更多 →</a>
+                </div>
+
+                <div class="card-widget categories-card reveal">
+                    <div class="widget-header">
+                        <span class="material-symbols-outlined">folder_open</span>分类
+                    </div>
+                    <div class="category-list">
+                        <a href="#" class="category-item"><span>AI / 深度学习</span><span class="category-count">3</span></a>
+                        <a href="#" class="category-item"><span>C++ / 后端</span><span class="category-count">2</span></a>
+                        <a href="#" class="category-item"><span>开源 / 工具</span><span class="category-count">2</span></a>
+                        <a href="#" class="category-item"><span>ACG / 游戏</span><span class="category-count">1</span></a>
+                        <a href="#" class="category-item"><span>随笔 / 生活</span><span class="category-count">1</span></a>
+                        <a href="#" class="category-item"><span>博客指南</span><span class="category-count">1</span></a>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="content-main">
+                <section id="posts" class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title-line">
+                            <span class="material-symbols-outlined">article</span>最新文章
+                        </h2>
+                        <a href="#archive" class="section-more">查看全部 →</a>
+                    </div>
+                    <div class="posts-list">
+                        <article class="post-card card-base reveal">
+                            <div class="post-card-inner has-cover">
+                                <div class="post-card-cover">
+                                    <img src="images/银狼0.jpg" alt="深度学习入门" loading="lazy">
+                                </div>
+                                <div class="post-card-body">
+                                    <div class="post-card-meta">
+                                        <span class="post-card-date">2025-06-15</span>
+                                        <span class="meta-divider">·</span>
+                                        <span class="post-card-pinned">
+                                            <span class="material-symbols-outlined">push_pin</span>置顶
+                                        </span>
+                                        <a href="#" class="post-card-category-tag">AI</a>
+                                    </div>
+                                    <h3 class="post-card-title">
+                                        <a href="#">深度学习入门：从感知机到 Transformer</a>
+                                    </h3>
+                                    <p class="post-card-desc">深入浅出地讲解深度学习的发展历程，从最基础的感知机模型一路到改变 NLP 格局的 Transformer 架构。涵盖 CNN、RNN、LSTM、Attention 机制等核心概念。</p>
+                                    <div class="post-card-stats">
+                                        <span class="stat-item"><span class="material-symbols-outlined">schedule</span>15 分钟</span>
+                                        <span class="stat-item"><span class="material-symbols-outlined">visibility</span>1,200 次</span>
+                                        <a href="#" class="post-card-read-btn">阅读文章 →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-card card-base reveal">
+                            <div class="post-card-inner has-cover">
+                                <div class="post-card-cover">
+                                    <img src="images/银狼1.jpg" alt="C++20 协程" loading="lazy">
+                                </div>
+                                <div class="post-card-body">
+                                    <div class="post-card-meta">
+                                        <span class="post-card-date">2025-05-20</span>
+                                        <span class="meta-divider">·</span>
+                                        <a href="#" class="post-card-category-tag">C++</a>
+                                    </div>
+                                    <h3 class="post-card-title">
+                                        <a href="#">C++ 20 协程实战指南：异步编程新范式</a>
+                                    </h3>
+                                    <p class="post-card-desc">C++20 引入的协程为异步编程带来了全新的范式。本文通过实际案例带你掌握 co_await、co_yield 等核心概念，以及如何在实际项目中应用。</p>
+                                    <div class="post-card-stats">
+                                        <span class="stat-item"><span class="material-symbols-outlined">schedule</span>12 分钟</span>
+                                        <span class="stat-item"><span class="material-symbols-outlined">visibility</span>890 次</span>
+                                        <a href="#" class="post-card-read-btn">阅读文章 →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-card card-base reveal">
+                            <div class="post-card-inner has-cover">
+                                <div class="post-card-cover">
+                                    <img src="images/银狼2.jpg" alt="打造个人AI助手" loading="lazy">
+                                </div>
+                                <div class="post-card-body">
+                                    <div class="post-card-meta">
+                                        <span class="post-card-date">2025-04-10</span>
+                                        <span class="meta-divider">·</span>
+                                        <a href="#" class="post-card-category-tag">AI</a>
+                                        <a href="#" class="post-card-category-tag">开源</a>
+                                    </div>
+                                    <h3 class="post-card-title">
+                                        <a href="#">打造个人 AI 助手：从零到部署完整指南</a>
+                                    </h3>
+                                    <p class="post-card-desc">分享如何利用开源大语言模型打造专属于自己的 AI 助手，涵盖模型选择（LLaMA / Qwen / DeepSeek）、LoRA 微调与私有化部署的完整流程。</p>
+                                    <div class="post-card-stats">
+                                        <span class="stat-item"><span class="material-symbols-outlined">schedule</span>20 分钟</span>
+                                        <span class="stat-item"><span class="material-symbols-outlined">visibility</span>2,100 次</span>
+                                        <a href="#" class="post-card-read-btn">阅读文章 →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-card card-base reveal">
+                            <div class="post-card-inner has-cover">
+                                <div class="post-card-cover">
+                                    <img src="images/银狼合照1.jpg" alt="博客搭建" loading="lazy">
+                                </div>
+                                <div class="post-card-body">
+                                    <div class="post-card-meta">
+                                        <span class="post-card-date">2025-03-01</span>
+                                        <span class="meta-divider">·</span>
+                                        <a href="#" class="post-card-category-tag">博客指南</a>
+                                    </div>
+                                    <h3 class="post-card-title">
+                                        <a href="#">从零搭建炫酷个人博客：技术选型与实现</a>
+                                    </h3>
+                                    <p class="post-card-desc">分享个人博客搭建的完整思路：为什么选择静态站点、如何设计动画效果、SEO 优化策略以及持续部署的最佳实践。</p>
+                                    <div class="post-card-stats">
+                                        <span class="stat-item"><span class="material-symbols-outlined">schedule</span>8 分钟</span>
+                                        <span class="stat-item"><span class="material-symbols-outlined">visibility</span>650 次</span>
+                                        <a href="#" class="post-card-read-btn">阅读文章 →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-card card-base reveal">
+                            <div class="post-card-inner no-cover">
+                                <div class="post-card-body" style="width:100%">
+                                    <div class="post-card-meta">
+                                        <span class="post-card-date">2025-02-14</span>
+                                        <span class="meta-divider">·</span>
+                                        <a href="#" class="post-card-category-tag">随笔</a>
+                                    </div>
+                                    <h3 class="post-card-title">
+                                        <a href="#">技术人的马拉松：代码与跑步的双重人生</a>
+                                    </h3>
+                                    <p class="post-card-desc">作为一名程序员，跑步和写代码有着惊人的相似之处：都需要坚持、策略和持续优化。分享我的马拉松训练经验和感悟。</p>
+                                    <div class="post-card-stats">
+                                        <span class="stat-item"><span class="material-symbols-outlined">schedule</span>6 分钟</span>
+                                        <span class="stat-item"><span class="material-symbols-outlined">visibility</span>420 次</span>
+                                        <a href="#" class="post-card-read-btn">阅读文章 →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="archive" class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title-line">
+                            <span class="material-symbols-outlined">archive</span>文章归档
+                        </h2>
+                    </div>
+                    <div class="archive-list">
+                        <details class="archive-year card-base reveal" open>
+                            <summary>
+                                <span class="material-symbols-outlined">expand_more</span>
+                                2025 年
+                                <span class="archive-count">5 篇</span>
+                            </summary>
+                            <div class="archive-items">
+                                <a href="javascript:void(0)" class="archive-item">
+                                    <span class="archive-date">06-15</span>
+                                    <span>深度学习入门：从感知机到 Transformer</span>
+                                    <span class="archive-cat">AI</span>
+                                </a>
+                                <a href="javascript:void(0)" class="archive-item">
+                                    <span class="archive-date">05-20</span>
+                                    <span>C++ 20 协程实战指南</span>
+                                    <span class="archive-cat">C++</span>
+                                </a>
+                                <a href="javascript:void(0)" class="archive-item">
+                                    <span class="archive-date">04-10</span>
+                                    <span>打造个人 AI 助手：从零到部署</span>
+                                    <span class="archive-cat">AI</span>
+                                </a>
+                                <a href="javascript:void(0)" class="archive-item">
+                                    <span class="archive-date">03-01</span>
+                                    <span>从零搭建炫酷个人博客</span>
+                                    <span class="archive-cat">博客指南</span>
+                                </a>
+                                <a href="javascript:void(0)" class="archive-item">
+                                    <span class="archive-date">02-14</span>
+                                    <span>技术人的马拉松</span>
+                                    <span class="archive-cat">随笔</span>
+                                </a>
+                            </div>
+                        </details>
+                        <details class="archive-year card-base reveal">
+                            <summary>
+                                <span class="material-symbols-outlined">expand_more</span>
+                                2024 年
+                                <span class="archive-count">1 篇</span>
+                            </summary>
+                            <div class="archive-items">
+                                <a href="javascript:void(0)" class="archive-item">
+                                    <span class="archive-date">12-08</span>
+                                    <span>博客开篇：我的技术之旅</span>
+                                    <span class="archive-cat">随笔</span>
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section id="categories" class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title-line">
+                            <span class="material-symbols-outlined">folder_open</span>分类
+                        </h2>
+                    </div>
+                    <div class="categories-bar">
+                        <a href="#" class="cat-chip">AI / 深度学习 <span>3</span></a>
+                        <a href="#" class="cat-chip">C++ / 后端 <span>2</span></a>
+                        <a href="#" class="cat-chip">开源 / 工具 <span>2</span></a>
+                        <a href="#" class="cat-chip">ACG / 游戏 <span>1</span></a>
+                        <a href="#" class="cat-chip">随笔 / 生活 <span>1</span></a>
+                        <a href="#" class="cat-chip">博客指南 <span>1</span></a>
+                    </div>
+                </section>
+
+                <section id="tags" class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title-line">
+                            <span class="material-symbols-outlined">tag</span>标签
+                        </h2>
+                    </div>
+                    <div class="tags-cloud">
+                        <a href="#" class="tag-chip">AI</a>
+                        <a href="#" class="tag-chip">Python</a>
+                        <a href="#" class="tag-chip">深度学习</a>
+                        <a href="#" class="tag-chip">Transformer</a>
+                        <a href="#" class="tag-chip">C++</a>
+                        <a href="#" class="tag-chip">协程</a>
+                        <a href="#" class="tag-chip">开源</a>
+                        <a href="#" class="tag-chip">LLaMA</a>
+                        <a href="#" class="tag-chip">博客搭建</a>
+                        <a href="#" class="tag-chip">马拉松</a>
+                        <a href="#" class="tag-chip">ACG</a>
+                        <a href="#" class="tag-chip">星穹铁道</a>
+                        <a href="#" class="tag-chip">银狼</a>
+                        <a href="#" class="tag-chip">工具</a>
+                    </div>
+                </section>
+
+                <section id="friends" class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title-line">
+                            <span class="material-symbols-outlined">group</span>友情链接
+                        </h2>
+                    </div>
+                    <div class="friends-grid">
+                        <a href="https://github.com/hcb1729" target="_blank" rel="noopener" class="friend-card card-base reveal">
+                            <img src="images/头像.png" alt="头像" class="friend-avatar">
+                            <div class="friend-info">
+                                <div class="friend-name">所追寻的风</div>
+                                <div class="friend-desc">我的 GitHub 主页</div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <section id="gallery" class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title-line">
+                            <span class="material-symbols-outlined">photo_library</span>相册
+                        </h2>
+                    </div>
+                    <div class="gallery-grid">
+                        <div class="gallery-item reveal">
+                            <img src="images/银狼0.jpg" alt="银狼" loading="lazy">
+                            <div class="gallery-caption">银狼 · 星穹铁道</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/银狼1.jpg" alt="银狼" loading="lazy">
+                            <div class="gallery-caption">银狼 · 骇客风格</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/银狼2.jpg" alt="银狼" loading="lazy">
+                            <div class="gallery-caption">银狼 · 游戏时刻</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/银狼合照1.jpg" alt="合照" loading="lazy">
+                            <div class="gallery-caption">银狼 · 特别合照</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="videos" class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title-line">
+                            <span class="material-symbols-outlined">videocam</span>视频展示
+                        </h2>
+                    </div>
+                    <p class="section-desc">点击卡片即可播放预览</p>
+                    <div class="video-showcase">
+                        <div class="video-card card-base reveal" data-video-src="vedio/银狼.mp4" data-video-poster="images/银狼0.jpg">
+                            <div class="video-card-poster">
+                                <img src="images/银狼0.jpg" alt="银狼" loading="lazy">
+                                <div class="video-play-overlay">
+                                    <span class="material-symbols-outlined">play_circle</span>
+                                </div>
+                                <div class="video-duration">02:34</div>
+                            </div>
+                            <div class="video-card-info">
+                                <h4>银狼 · 星穹铁道</h4>
+                                <p>超级骇客银狼的精彩片段</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="video-lightbox" id="videoLightbox">
+                    <div class="video-lightbox-backdrop" id="videoLightboxBackdrop"></div>
+                    <div class="video-lightbox-content">
+                        <button class="video-lightbox-close" id="videoLightboxClose">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                        <video id="videoLightboxPlayer" controls playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <section id="chat" class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title-line">
+                            <span class="material-symbols-outlined">smart_toy</span>银狼 · 虚拟 AI 对话
+                        </h2>
+                    </div>
+                    <p class="section-desc">与来自星穹铁道的超级骇客——银狼进行实时对话</p>
+
+                    <div class="chat-login card-base" id="chatLogin">
+                        <div class="login-header">
+                            <img src="images/银狼0.jpg" alt="银狼" class="login-avatar-img">
+                            <h3>身份验证</h3>
+                            <p>请输入账号密码以接入银狼 AI 系统</p>
+                        </div>
+                        <form id="loginForm" class="login-form">
+                            <div class="input-field">
+                                <span class="material-symbols-outlined">person</span>
+                                <input type="text" id="loginUsername" placeholder="请输入账号" required>
+                            </div>
+                            <div class="input-field">
+                                <span class="material-symbols-outlined">lock</span>
+                                <input type="password" id="loginPassword" placeholder="请输入密码" required>
+                            </div>
+                            <button type="submit" class="btn-primary login-submit">
+                                接入系统
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </form>
+                        <p class="login-tip" id="loginError"></p>
+                    </div>
+
+                    <div class="chat-interface card-base" id="chatInterface" style="display:none;">
+                        <div class="chat-top-bar">
+                            <div class="chat-user-info">
+                                <img src="images/银狼0.jpg" alt="银狼" class="chat-user-avatar">
+                                <div>
+                                    <h4>银狼 <span class="online-dot"></span></h4>
+                                    <p>超级骇客 · 在线</p>
+                                </div>
+                            </div>
+                            <button class="btn-icon chat-logout" id="chatLogout" title="退出">
+                                <span class="material-symbols-outlined">logout</span>
+                            </button>
+                        </div>
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="msg-row msg-bot">
+                                <img src="images/银狼0.jpg" alt="银狼" class="msg-avatar">
+                                <div class="msg-bubble">
+                                    <p>哟，来了啊。我是银狼，星穹列车的超级骇客。</p>
+                                    <p>有什么想聊的？代码？游戏？还是想让我黑进哪个系统？开玩笑的——大概。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-bar">
+                            <textarea id="chatInput" placeholder="输入消息…" rows="1"></textarea>
+                            <button id="chatSend" class="btn-icon send-btn" title="发送">
+                                <span class="material-symbols-outlined">send</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about" class="content-section">
+                    <div class="section-header">
+                        <h2 class="section-title-line">
+                            <span class="material-symbols-outlined">person</span>关于
+                        </h2>
+                    </div>
+                    <div class="about-content card-base reveal">
+                        <div class="about-banner">
+                            <img src="images/头像.png" alt="头像" class="about-big-avatar">
+                            <h3>所追寻的风</h3>
+                            <p>「代码就是我的语言，数据就是我的世界。」</p>
+                        </div>
+                        <div class="about-text">
+                            <h4><span class="material-symbols-outlined">info</span>关于</h4>
+                            <p>我是一位普通的技术爱好者，爱好 ACG、户外运动、羽毛球、足球和马拉松。目前专注于 AI / 深度学习领域的学习与研究，同时也热衷于 C++ 和 Python 开发。</p>
+                            <p>这个博客使用纯 HTML / CSS / JavaScript 构建，力求简洁高效而不失美感。</p>
+
+                            <h4><span class="material-symbols-outlined">code</span>技术栈</h4>
+                            <div class="skill-tags">
+                                <span>Python</span><span>C++</span><span>JavaScript</span>
+                                <span>PyTorch</span><span>Docker</span><span>Git</span>
+                                <span>Linux</span>
+                            </div>
+
+                            <h4><span class="material-symbols-outlined">link</span>链接</h4>
+                            <div class="about-links">
+                                <a href="https://github.com/hcb1729" target="_blank" rel="noopener" class="about-link-card">
+                                    <i class="fab fa-github"></i>
+                                    <div>
+                                        <div class="alink-title">GitHub</div>
+                                        <div class="alink-url">github.com/hcb1729</div>
+                                    </div>
+                                </a>
+                                <a href="mailto:861999067@qq.com" class="about-link-card">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <div class="alink-title">邮箱</div>
+                                        <div class="alink-url">861999067@qq.com</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="sidebar sidebar-right">
+                <div class="card-widget stats-card reveal">
+                    <div class="widget-header">
+                        <span class="material-symbols-outlined">bar_chart</span>站点统计
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-cell">
+                            <div class="stat-value">6</div>
+                            <div class="stat-label">文章</div>
+                        </div>
+                        <div class="stat-cell">
+                            <div class="stat-value">6</div>
+                            <div class="stat-label">分类</div>
+                        </div>
+                        <div class="stat-cell">
+                            <div class="stat-value">14</div>
+                            <div class="stat-label">标签</div>
+                        </div>
+                        <div class="stat-cell">
+                            <div class="stat-value" id="runningDays">...</div>
+                            <div class="stat-label">运行天数</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-widget info-card reveal">
+                    <div class="widget-header">
+                        <span class="material-symbols-outlined">info</span>站点信息
+                    </div>
+                    <div class="info-list">
+                        <div class="info-row">
+                            <span>构建方式</span>
+                            <span>纯静态 HTML / CSS / JS</span>
+                        </div>
+                        <div class="info-row">
+                            <span>站点开始</span>
+                            <span>2024-12-08</span>
+                        </div>
+                        <div class="info-row">
+                            <span>GitHub</span>
+                            <a href="https://github.com/hcb1729" target="_blank" rel="noopener">@hcb1729</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-widget github-card reveal">
+                    <div class="widget-header">
+                        <i class="fab fa-github"></i>GitHub 仓库
+                    </div>
+                    <a href="https://github.com/hcb1729" target="_blank" rel="noopener" class="repo-item">
+                        <div class="repo-header">
+                            <span class="material-symbols-outlined">folder</span>
+                            <span class="repo-name">个人博客</span>
+                        </div>
+                        <p class="repo-desc">本项目开源地址，欢迎 Star 和 Fork</p>
+                        <div class="repo-meta">
+                            <span><span class="material-symbols-outlined">star</span>0</span>
+                            <span><span class="material-symbols-outlined">fork_right</span>0</span>
+                        </div>
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-social">
+                <a href="https://github.com/hcb1729" target="_blank" rel="noopener" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:861999067@qq.com" title="邮箱">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://qm.qq.com/q/ZGsFa8qX2G" target="_blank" rel="noopener" title="QQ">
+                    <i class="fab fa-qq"></i>
+                </a>
+            </div>
+            <div class="footer-copy">
+                © 2024 – 2026 所追寻的风 · 版权所有
+            </div>
+            <div class="footer-quote">「代码就是我的武器。」</div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" title="回到顶部">
+        <span class="material-symbols-outlined">keyboard_arrow_up</span>
+    </button>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="post-modal" id="postModal">
+        <div class="post-modal-backdrop" id="postModalBackdrop"></div>
+        <div class="post-modal-content">
+            <button class="post-modal-close" id="postModalClose">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="post-modal-body" id="postModalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
